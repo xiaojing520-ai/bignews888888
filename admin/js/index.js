@@ -12,4 +12,10 @@ $(function () {
             }
         }
     })
+
+    //退出功能   给退出绑定点击事件
+    $(".header_bar .logout").on("click", function () {
+        window.localStorage.removeItem("token");
+        window.location.href = "./login.html";
+    })
 })
