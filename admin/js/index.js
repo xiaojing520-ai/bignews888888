@@ -18,4 +18,26 @@ $(function () {
         window.localStorage.removeItem("token");
         window.location.href = "./login.html";
     })
+
+    //文章管理中的子标签高亮   添加类   active
+    //  实现左侧按钮的高亮显示功能
+    //  给左侧所有的按钮注册事件 
+
+    $(".menu .level01").on("click", function () {
+        $(this).addClass("active").siblings("div").removeClass("active");
+        if ($(this).index() == 1) {
+            $(".menu .level02").slideToggle();
+
+            //给小三角添加切换 类名
+            $(".menu .level01:eq(1) b").toggleClass("rotate0");
+
+            // 默认让子标签的第1个'文章列表'就高亮显示 触发器实现
+            $(".menu .level02 li:eq(0)").click();
+        }
+    })
+    // 给每一个li标签分别注册事件
+    $(".menu .level02 li").on("click", function () {
+        $(this).addClass("active").siblings().removeClass("active");
+    })
+
 })
