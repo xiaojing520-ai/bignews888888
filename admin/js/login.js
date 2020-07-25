@@ -31,8 +31,8 @@ $(function () {
                     $('#myModal').on('hidden.bs.modal', function (e) {
                         // 将服务器端响应回来的token字符串，存储到本地存储当中 
                         //  localStorage.setItem(key,value)：将value存储到key字段
-                        localStorage.setItem('token',res.token)
-                        location.href = '../index.html'
+                        localStorage.setItem("token", res.token)
+                        location.href = './index.html'
                     })
                 }
 
