@@ -14,6 +14,8 @@
     <script src="./libs/jquery-1.12.4.min.js"></script>
     <!-- 模板引擎 -->
     <script src="./libs/template-web.js"></script>
+    <script src="./js/http.js"></script>
+    <script src="./js/article_edit.js"></script>
 </head>
 
 <body>
@@ -39,7 +41,7 @@
                 <div class="form-group">
                     <label for="inputCategory" class="col-sm-2 control-label">文章类别：</label>
                     <div class="col-sm-4">
-                        <select class="form-control category" name="categoryId">
+                        <select class="form-control category" name="categoryId" id="categoryId">
                             <option>类别一</option>
                             <option>类别二</option>
                             <option>类别三</option>
@@ -67,6 +69,11 @@
             </form>
         </div>
     </div>
+    <script type="text/html" id="categoryList">
+        {{each data value index}}
+        <option value="{{value.id}}">{{value.name}}</option>
+        {{/each}}
+    </script>
 </body>
 
 </html>

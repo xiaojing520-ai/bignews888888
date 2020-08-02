@@ -124,12 +124,13 @@
             <td class="text-center">{{value.date}}</td>
             <td class="text-center">{{value.state}}</td>
             <td class="text-center">
-                <button data-id="{{value.id}}" class="btn btn-default btn-xs">编辑</button>
+                <a href="article_edit.html?id={{value.id}}" class="btn btn-default btn-xs">编辑</a>
                 <button  data-toggle="modal"
                 data-target="#delModal" data-id="{{value.id}}"  class="btn btn-danger btn-xs delete">删除</button>
             </td>
         </tr>
         {{/each}}
+        
     </script>
 </body>
 
